@@ -1,11 +1,10 @@
 #include <iostream>
 using namespace std;
-
 int main() {
 	setlocale(0, "");
 
-	cout << "Программа Геометрические Фигуры" << endl << endl;
-	cout << "[1] Крестик\n\n";
+	cout << "Программа Фигуры" << endl << endl;
+	cout << "[1] Треугольник\n\n";
 	cout << "[+] Размер: ";
 	int size;
 	cin >> size;
@@ -18,10 +17,12 @@ int main() {
 	cout << "Результат: \n\n";
 
 	for (int y = 0; y < size; y++) {
-		cout << "\x1b[93m# ";
+		cout << "\x1b[96m# ";
 		cout << "\t\t\t\t\t";
 		for (int x = 0; x < size; x++) {
-			if (x == size - y || y == x + 1) {
+			if (x == (size / 2) + y ||
+				x == (size / 2) - y ||
+				y == size / 2) {
 				cout << "# ";
 			}
 			else {

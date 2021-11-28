@@ -4,8 +4,7 @@ using namespace std;
 int main() {
 	setlocale(0, "");
 
-	cout << "Программа Геометрические Фигуры" << endl << endl;
-	cout << "[1] Крестик\n\n";
+	cout << "[1] Квадрат\n\n";
 	cout << "[+] Размер: ";
 	int size;
 	cin >> size;
@@ -18,10 +17,13 @@ int main() {
 	cout << "Результат: \n\n";
 
 	for (int y = 0; y < size; y++) {
-		cout << "\x1b[93m# ";
+		cout << "\x1b[90m# ";
 		cout << "\t\t\t\t\t";
 		for (int x = 0; x < size; x++) {
-			if (x == size - y || y == x + 1) {
+			if (x == 0 || x == size - 1 || x == 0 || x == size - 1) {
+				cout << "# ";
+			}
+			else if (y == 0 || y == size - 1 || y == 0 || y == size - 1) {
 				cout << "# ";
 			}
 			else {
